@@ -6,7 +6,7 @@ import sys
 from pathlib import Path
 
 main_client = pymongo.MongoClient(
-    "mongodb://data_integration:reconnect@34.209.114.102/CUSTOM_PIPELINES_CONFIGS")
+    "mongodb://user:pwd@34.209.114.102/CUSTOM_PIPELINES_CONFIGS")
 
 main_db = main_client['CUSTOM_PIPELINES_CONFIGS']
 
