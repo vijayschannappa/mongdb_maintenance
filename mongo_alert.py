@@ -12,14 +12,14 @@ from email.mime.text import MIMEText
 from email.mime.application import MIMEApplication
 
 
-username = "rrf@reconnectenergy.com"
-password = "reconnectfs"  # Password
+username = "rrf@energy.com"
+password = "****"  # Password
 server = smtplib.SMTP('smtp.gmail.com', 587)
 
 
-from_addrs = "rrf@reconnectenergy.com"
+from_addrs = "*.com"
 
-to_addrs = 'vijay.s@reconnectenergy.com,atindra.nair@reconnectenergy.com'
+to_addrs = '*.com,*.nair@.com'
 
 
 def send_mail(username, password, msg):
