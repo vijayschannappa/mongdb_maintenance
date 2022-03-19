@@ -4,8 +4,8 @@ mongodb user creation:
 admin user
 
 db.createUser(
-{	user: "admin",
-	pwd: "reconnect",
+{	user: "user",
+	pwd: "user",
 
 	roles:[{role: "userAdminAnyDatabase" , db:"admin"}]})
 
@@ -13,7 +13,7 @@ db.createUser(
 
 
 
-db.createUser({user: "reconnect",pwd: "reconnect",host: 34.209.114.102,roles: [{role: "readWrite" , db:"CUSTOM_PIPELINES_CONFIGS"}]})
+db.createUser({user: "user",pwd: "pwd",host: host,roles: [{role: "readWrite" , db:"CUSTOM_PIPELINES_CONFIGS"}]})
 
 DATABASE OF CONFIGURATION FILES:
 
@@ -24,9 +24,9 @@ db.SCADA_PIPELINE_CONFIGS.insert({'NAME':'RECONNECT','ID':287})
 commands:
 db.getUser()
 dbs
-mongodb://reconnect:reconnect@34.209.114.102:27017/?authSource=CUSTOM_PIPELINES_CONFIGS&readPreference=primary&appname=MongoDB%20Compass&ssl=false
+mongodb://user:pwd@host:27017/?authSource=CUSTOM_PIPELINES_CONFIGS&readPreference=primary&appname=MongoDB%20Compass&ssl=false
 
-mongodb://data_integration:reconnect@34.208.17.229:27017/?authSource=CUSTOM_PIPELINES_CONFIGS&readPreference=primary&appname=MongoDB%20Compass&ssl=false
+mongodb://user:pwd@host:27017/?authSource=CUSTOM_PIPELINES_CONFIGS&readPreference=primary&appname=MongoDB%20Compass&ssl=false
 
 sudo cat /etc/init/mongod.conf | grep start\ on
 
